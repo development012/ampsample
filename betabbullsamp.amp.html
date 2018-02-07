@@ -6,31 +6,98 @@
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
     <title> Betabulls</title>
-    <link rel="canonical" href="betabbullsamp.html">
+    <link rel="canonical" href="betabbullsamp.amp.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            font-family: 'Roboto', sans-serif !important;
+
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+    </style>
+    <noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
 
     <style amp-custom>
         .navbar {
             overflow: hidden;
-            background-color: #333;
+            background-color: #fff;
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 15px;
+            padding: 20px 0;
             z-index: 1;
         }
 
         .navbar a {
             float: right;
             display: block;
-            color: #d0d0d0;
+            color: #716f6f;
             text-align: center;
-            padding: 11px 27px 0px 0px;
             text-decoration: none;
-            font-size: 20px;
-            margin-top: -10px;
+            font-size: 19px;
+            margin-top: 7px;
+             padding: 7px 12px;
+             text-transform: uppercase;
         }
 
         .navbar a:first-child {
@@ -41,7 +108,7 @@
 
 
         .navbar a:hover {
-            background-color: #333;
+            background-color: #2588BA;
             color: white;
 
 
@@ -59,6 +126,10 @@
             width: 50px;
             height: 50px;
 
+        }
+
+        #form span {
+            color: #333;
         }
 
         span {
@@ -91,7 +162,7 @@
             ;
         }
 
-        .mytext {
+        .mytext h2 {
             padding-top: 8px;
             padding-bottom: 3px;
             font-size: 52px;
@@ -100,7 +171,8 @@
             font-weight: 300;
             color: #000;
             text-align: center;
-            margin-bottom: 5px;
+            /* / margin-bottom: 5px; / */
+            margin: 30px;
         }
 
         .super {
@@ -119,19 +191,24 @@
             line-height: 1.5;
             font-family: 'Roboto', sans-serif;
             font-weight: 300;
-            color: darkgrey;
-            max-width: 760px;
+            color: #000;
+            max-width: 55%;
             margin-left: auto;
-            margin-right: auto
+            text-align: center;
+            margin-right: auto;
+            margin-bottom: 60px;
+            margin-top: 45px;
         }
 
         amp-youtube {
-            width: 70%;
+            width: 88%;
             height: 50%;
             margin-left: 15%;
-            margin-top: 5%;
+            margin-top: 0%;
         }
-
+        .mrg-btm-100{
+            margin-bottom: 100px;
+        }
         #How-it-works,
         #contact,
         #news {
@@ -165,7 +242,7 @@
             border: transparent;
         }
 
-       
+
         amp-accordion h2 {
             font-family: 'Roboto', sans-serif;
             color: #333;
@@ -173,22 +250,22 @@
             font-weight: 100;
         }
 
-        amp-accordion p {
+        /* amp-accordion p {
             font-size: 20px;
             color: grey;
 
-        }
+        } */
 
-        .accborder {
+        /* .accborder {
             border-top: 1px solid #eee;
-        }
+        } */
 
-       
-       
+
+
 
         #img-main {
             width: 80%;
-            height: 400px;
+            height: 540px;
             margin-left: 150px;
             background-color: white;
         }
@@ -250,6 +327,13 @@
             display: block;
             text-align: left;
         }
+        .whtamp p 
+        {text-align:justify;
+        margin-bottom:10px;
+        font-family: 'Roboto', sans-serif;
+    line-height: 28px;
+    font-size: 18px;
+        }
 
         .frst_container {
             max-width: 1200px;
@@ -278,80 +362,186 @@
         .spc {
             margin-top: 25%;
         }
-        .col-sm-3{
-            left:15px;
-            width:25%;
-            float:left;
+
+        .col-sm-3 {
+            left: 15px;
+            width: 25%;
+            float: left;
         }
-        .a-container{
-max-width: 1200px;
-margin-left: auto;
-    margin-right: auto;
-    padding: 0;
-    width: 100%;
+
+        .a-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0;
+            width: 100%;
+            margin-bottom:360px;
+        }
+
+        .numberwrapper {
+            position: relative;
+            z-index: -1;
+        }
+
+        .number {
+            position: relative;
+            z-index: 1;
+            width: 34px;
+            height: 34px;
+            background-color: #222;
+            border-radius: 100%;
+            border: 2px solid #fff;
+            border-width: 2px;
+        }
+
+        .digit {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            transform: translateY(-50%);
+            color: #fff;
+        }
+
+        .name_xs {
+            font-size: 16px;
+            line-height: 1.35;
+        }
+
+        .t-name {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            color: #fff;
+        }
+
+        .a_line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: -40px;
+            transform: translateY(-50%);
+            background-color: #222;
+            height: 2px;
+
+        }
+
+        .p_height {
+            font-size: 18px;
+            text-align: left;
+            margin-top: 15px;
+            margin-right: 15px;
+            line-height: 25px;
+        }
+
+        .heig {
+            font-size: 25px;
+            margin-top: 5px;
+        }
+
+        h3 {
+            font-size: 24px;
+        }
+
+        my-margin {
+            margin: 10px 10px 10px 10px;
+        }
+
+        my-line {
+            height: 2px;
+            background-color: #e6e6e6;
+        }
+        .latestchan{
+            margin-left: -136px;
+    margin-right: 100px;
+    max-width: 100%;
+    margin-top: 5%;
+        }
+      .ampwork-img {
+        margin: 0px 312px;
+      }
+      #FAQ.cust_fnt{
+          font-size: 16px;
+      }
+      .img-slide {margin-top:80px;}
+      .logo{float: left;}
+      .no-text-dec:hover {background-color: none;}
+      .footer{padding:10px 0;background-color: #000;color:#909090;}
+      .footer p {text-align: center;}
+
+      /* Accordian css */
+
+      
+.half {
+  float: left;
+  width: 90%;
+  padding: 0 1em;
 }
-.numberwrapper {
+/* Acordeon styles */
+.tab {
+  position: relative;
+  margin-bottom: 1px;
+  width: 105%;
+  color: #000;
+  overflow: hidden;
+}
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+label {
     position: relative;
-    z-index: -1;
+    display: block;
+    padding: 0 0 0 1em;
+    background: #fff;
+    border-top: 1px solid #ccc;
+    font-weight: bold;
+    line-height: 5;
+    cursor: pointer;
+    font-size: 20px
 }
-.number {
-    position: relative;
-    z-index: 1;
-    width: 34px;
-    height: 34px;
-    background-color: #222;
-    border-radius: 100%;
-    border: 2px solid #fff;
-	border-width: 2px;
+
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  background: #fff;
+  transition: max-height .35s;
 }
-.digit {
+
+.tab-content p {
+   font-family: 'Roboto', sans-serif;
+    line-height: 28px;
+    font-size: 18px;
+}
+/* :checked */
+input:checked ~ .tab-content {
+  max-height: 10em;
+}
+/* Icon */
+label::after {
     position: absolute;
-    top: 50%;
-    left: 0;
     right: 0;
+    top: 0;
+    font-size: 33px;
+    display: block;
+    width: 3em;
+    height: 3em;
+    line-height: 3;
     text-align: center;
-    transform: translateY(-50%);
-    color: #fff;
+    transition: all .35s;
 }
-
-.name_xs {
-    font-size: 16px;
-    line-height: 1.35;
+input[type=checkbox] + label::after {
+  content: "+";
 }
-
-.t-name {
-    font-family: 'Roboto',sans-serif;
-    font-weight: 400;
-    color: #fff;
+input[type=radio] + label::after {
+  content: "\25BC";
 }
-.a_line {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: -40px;
-    transform: translateY(-50%);
-    background-color: #222;
-    height: 2px;
-	
+input[type=checkbox]:checked + label::after {
+  transform: rotate(315deg);
 }
-.p_height{
-    font-size: 20px;
-    text-align: left;
-    margin-top: 15px;
-    margin-right: 15px;
-}
-.heig{
-    font-size: 25px;
-    margin-top: 5px;
-}
-h3{
-    font-size: 24px;
-}
-my-margin{
-margin:10px 10px 10px 10px;
-}
-my-line{
-height: 2px; background-color: #e6e6e6;
+input[type=radio]:checked + label::after {
+  transform: rotateX(180deg);
 }
     </style>
 
@@ -360,17 +550,14 @@ height: 2px; background-color: #e6e6e6;
 <body>
     <div class="navbar">
         <p>
-            <a href="betabbullsamp.html">
-                <span>BETA</span>
-                <span>
-                    <amp-img src="betabulls.png" class="img_responsive" height="35" width="35"></amp-img>
-                </span>
-                <span>BULLS</span>
+            <a href="betabbullsamp.amp.html" class="no-text-dec">
+                <amp-img src="samplelogo.jpg" class="img_responsive logo" height="35" width="35"></amp-img>
+                <span>Sample Logo</span>
             </a>
         </p>
-
+        <a href="#form">Contact Us</a>
         <a href="#news">News</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact">Amp samples</a>
         <a href="#whatisamp">What is amp</a>
         <a href="#How-it-works">How it works</a>
         <a class="active" href="#home">Home</a>
@@ -379,14 +566,10 @@ height: 2px; background-color: #e6e6e6;
     <div class="img_header" id="home">
         <h1 class="bannertext">We Build Reliable Software and Delight Your Customers
             <br>We Are Your Extended Team</h1>
-
-
-        <amp-img class="img_head" src="header-bg1.jpg" height="500" width="1500"></amp-img>
-
+            <amp-img class="img_head img-slide" src="header-bg1.jpg" height="500" width="1500"></amp-img>
     </div>
     <div id="whatisamp" class="mytext">
-        <p>What is AMP</p>
-        <div>
+        <h2>What is AMP</h2>
             <div class="frst_container">
                 <div class="col-6 col">
                     <div class="whtamp">
@@ -402,24 +585,23 @@ height: 2px; background-color: #e6e6e6;
                     </div>
                 </div>
                 <div class="col col-6">
-                    <amp-youtube width="60" height="30" layout="responsive" data-videoid="lBTCB7yLs8Y">
+                    <amp-youtube class="mrg-btm-100" width="60" height="30" layout="responsive" data-videoid="lBTCB7yLs8Y">
                     </amp-youtube>
                 </div>
             </div>
-        </div>
     </div>
 
 
-    <div id="How-it-works" class="mytext">
-        <p class="spc">How AMP works</p>
-        <amp-img class="super" src="ampstepsimageonly.jpg" height="400" width="800"></amp-img>
+    <div id="How-it-works" class="mytext clear-fix">
+        <h2>How AMP works</h2>
+        <amp-img class="super ampwork-img" src="ampstepsimageonly.jpg" height="400" width="800"></amp-img>
     </div>
 
     <div id="FAQ" class="mytext">
-        <p>FAQ</p>
+        <h2>FAQ</h2>
         <amp-accordion disable-session-states>
-            <section class="accborder">
-                <h2>What is the Accelerated Mobile Pages project?</h2>
+            <!-- <section class="accborder">
+                <h2 class="cust_fnt">What is the Accelerated Mobile Pages project?</h2>
                 <p>The Accelerated Mobile Pages ("AMP") Project is an open source initiative that came out of discussions between
                     publishers and technology companies about the need to improve the entire mobile content ecosystem for
                     everyone -- publishers, consumer platforms, advertisers, creators, and users.
@@ -467,86 +649,143 @@ height: 2px; background-color: #e6e6e6;
                 <h2>How to implement AMP for my website?</h2>
                 <p>Contact us by requesting a quote and we will reply within 24 hours with detailed project outline, cost and
                     steps to get started.</p>
-            </section>
+            </section> -->
+            <div class="wrapper">
+                <div class="half">
+                  <div class="tab">
+                    <input id="tab-one" type="checkbox" name="tabs">
+                    <label for="tab-one">What is the Accelerated Mobile Pages project?</label>
+                    <div class="tab-content">
+                      <p>The Accelerated Mobile Pages ("AMP") Project is an open source initiative that came out of discussions between
+                        publishers and technology companies about the need to improve the entire mobile content ecosystem for
+                        everyone -- publishers, consumer platforms, advertisers, creators, and users.
+                        <br> Today, the expectation is that content should load super fast and be easy to explore. The reality is
+                        that content can take several seconds to load, or, because the user abandons the slow page, never fully
+                        loads at all. Accelerated Mobile Pages are web pages designed to load near instantaneously -- they are
+                        a step towards a better mobile web for all.</p>
+                    </div>
+                  </div>
+                  <div class="tab">
+                    <input id="tab-two" type="checkbox" name="tabs">
+                    <label for="tab-two">How does AMP for Ecommerce work? </label>
+                    <div class="tab-content">
+                      <p>AMP doesn't affect search ranking directly at this point, but the improved performance on mobile does. AMP
+                        results for organic search terms are promoted to the top of the search engine result page.
+                        <br> Those pages that are converted to AMP format will get a lightning badge, which affects the CTR in search
+                        results. The AMP badge gets 20—40% more clicks on average compared to non-AMP search results.</p>
+                    </div>
+                  </div>
+                  <div class="tab">
+                    <input id="tab-three" type="checkbox" name="tabs">
+                    <label for="tab-three">How does AMP for Ecommerce work? </label>
+                    <div class="tab-content">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+                    </div>
+                  </div>
+                   <div class="tab">
+                    <input id="tab-three" type="checkbox" name="tabs">
+                    <label for="tab-three">Can I send my AdWords traffic to AMP page?</label>
+                    <div class="tab-content">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+                    </div>
+                  </div> <div class="tab">
+                    <input id="tab-three" type="checkbox" name="tabs">
+                    <label for="tab-three">What about those free AMP plugins for my website?</label>
+                    <div class="tab-content">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+                    </div>
+                  </div>
+                   <div class="tab">
+                    <input id="tab-three" type="checkbox" name="tabs">
+                    <label for="tab-three">How to implement AMP for my website?</label>
+                    <div class="tab-content">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+                    </div>
+                  </div> 
+                  
+                </div>
+              </div>
         </amp-accordion>
 
     </div>
 
 
     <div id="contact" class="mytext">
-        <p>Streamlined AMP development </p>
+        <h2>Streamlined AMP development </h2>
         <div class="stream">We've been creating AMP websites since the project was initially launched by Google. Due to our streamlined project
             timeline and expertise, we are able to launch AMP version for an average eCommerce site in under 10 working days.</div>
-            <div class="a-container">
+        <div class="a-container">
 
 
-                <div class="row my-margin">
-                    <div class=" col-sm-3">
-                        <div class="numberwrapper">
-                            <div class="number">
-                                <div class="digit t-name name_xs" >1</div>
-                            </div>
-                            <div class="a_line my-line"></div>
+            <div class="row my-margin">
+                <div class=" col-sm-3">
+                    <div class="numberwrapper">
+                        <div class="number">
+                            <div class="digit t-name name_xs">1</div>
                         </div>
-                        <h3>Request Quote</h3>
-                        <p class="p_height">Please fill out the quote request form and we will thoroughly analyse your existing website, the number of unique
-                            page templates and which ones should be converted to AMP. We will reply with a detailed quote within one
-                            business day.
-                        </p>
+                        <div class="a_line my-line"></div>
                     </div>
-                    <div class=" col-sm-3">
-                        <div class="numberwrapper">
-                            <div class="number">
-                                <div class="digit t-name name_xs" >2</div>
-                            </div>
-                            <div class="a_line my-line"></div>
+                    <h3>Request Quote</h3>
+                    <p class="p_height">Please fill out the quote request form and we will thoroughly analyse your existing website, the number
+                        of unique page templates and which ones should be converted to AMP. We will reply with a detailed
+                        quote within one business day.
+                    </p>
+                </div>
+                <div class=" col-sm-3">
+                    <div class="numberwrapper">
+                        <div class="number">
+                            <div class="digit t-name name_xs">2</div>
                         </div>
-                        <h3>Request Quote</h3>
-                        <p class="p_height">The whole process takes around 5 working days. We handcraft all AMP templates, preserving the original mobile
-                            design. Your existing website content will be fully synced with the AMP version, always keeping the information
-                            up-to-date.
-                        </p>
+                        <div class="a_line my-line"></div>
                     </div>
-                    <div class=" col-sm-3">
-                        <div class="numberwrapper">
-                            <div class="number" >
-                                <div class="digit t-name name_xs" >3</div>
-                            </div>
-                            <div class="a_line my-line"></div>
+                    <h3>Request Quote</h3>
+                    <p class="p_height">The whole process takes around 5 working days. We handcraft all AMP templates, preserving the original
+                        mobile design. Your existing website content will be fully synced with the AMP version, always keeping
+                        the information up-to-date.
+                    </p>
+                </div>
+                <div class=" col-sm-3">
+                    <div class="numberwrapper">
+                        <div class="number">
+                            <div class="digit t-name name_xs">3</div>
                         </div>
-                        <h3>Request Quote</h3>
-                        <p class="p_height">The whole process takes around 5 working days. We handcraft all AMP templates, preserving the original mobile
-                            design. Your existing website content will be fully synced with the AMP version, always keeping the information
-                            up-to-date
-                        </p>
+                        <div class="a_line my-line"></div>
                     </div>
-                    <div class=" col-sm-3">
-                        <div class="numberwrapper">
-                            <div class="number" >
-                                <div class="digit t-name name_xs">4</div>
-                            </div>
-            
+                    <h3>Request Quote</h3>
+                    <p class="p_height">The whole process takes around 5 working days. We handcraft all AMP templates, preserving the original
+                        mobile design. Your existing website content will be fully synced with the AMP version, always keeping
+                        the information up-to-date
+                    </p>
+                </div>
+                <div class=" col-sm-3">
+                    <div class="numberwrapper">
+                        <div class="number">
+                            <div class="digit t-name name_xs">4</div>
                         </div>
-                        <h3>Request Quote</h3>
-                        <p class="p_height">The whole process takes around 5 working days. We handcraft all AMP templates, preserving the original mobile
-                            design. Your existing website content will be fully synced with the AMP version, always keeping the information
-                            up-to-date solved design issue in amp page,betabulls site contact popup form
-                        </p>
+
                     </div>
+                    <h3>Request Quote</h3>
+                    <p class="p_height">The whole process takes around 5 working days. We handcraft all AMP templates, preserving the original
+                        mobile design. Your existing website content will be fully synced with the AMP version, always keeping
+                        the information up-to-date solved design issue in amp page,betabulls site contact popup form
+                    </p>
                 </div>
             </div>
         </div>
     </div>
+    </div>
     <div id="news" class="mytext">
-        <p class="spc">5 Misconceptions About AMP Debunked!</p>
+        <h2 class="spc">5 Misconceptions About AMP Debunked!</h2>
+        <div class="latestchan">
         <amp-youtube width="60" height="30" layout="responsive" data-videoid="lBTCB7yLs8Y">
         </amp-youtube>
+    </div>
 
     </div>
     <div id="img-main" class="mytext">
-        <p>We Have launched over 50 AMP Websites</p>
+        <h2>We Have launched over 50 AMP Websites</h2>
         <div id="img-main1">
-            <amp-img class="img-mainimg1" src="download.jpg" height="400px"></amp-img>
+            <amp-img class="img-mainimg1" src="download.jpg" height="405px"></amp-img>
 
         </div>
         <div id="img-main2">
@@ -554,12 +793,41 @@ height: 2px; background-color: #e6e6e6;
 
         </div>
         <div id="img-main3">
-                <amp-img  class="img-mainimg3" src="download2.jpg" height="200px"></amp-img>
+            <amp-img class="img-mainimg3" src="download2.jpg" height="200px"></amp-img>
 
         </div>
     </div>
-
-
+    <div class="footer">
+        <p>Copy right to </p>
+    </div>
+    <!-- <div id="form">
+        <form method="post" action-xhr="betabulls.com/smbs" target="_top">
+            <fieldset>
+                <label>
+                    <span>Name:</span>
+                    <input type="text" name="name" required>
+                </label>
+                <br>
+                <label>
+                    <span>Email:</span>
+                    <input type="email" name="email" required>
+                </label>
+                <br>
+                <input type="submit" value="Subscribe">
+            </fieldset>
+            <div submit-success>
+                <template type="amp-mustache">
+                    Subscription successful!
+                </template>
+            </div>
+            <div submit-error>
+                <template type="amp-mustache">
+                    Subscription failed!
+                </template>
+            </div>
+        </form>
+    </div>
+ -->
 
 
 </body>
