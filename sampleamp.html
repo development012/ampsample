@@ -8,96 +8,35 @@
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
     <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
     <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
+    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
     <title> Betabulls</title>
     <link rel="canonical" href="sampleamp.amp.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <style amp-boilerplate>
-        body {
-            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-            animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-            font-family: 'Roboto', sans-serif !important;
-
-        }
-
-        @-webkit-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-            to {
-                visibility: visible
-            }
-        }
-
-        @-moz-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-            to {
-                visibility: visible
-            }
-        }
-
-        @-ms-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-            to {
-                visibility: visible
-            }
-        }
-
-        @-o-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-            to {
-                visibility: visible
-            }
-        }
-
-        @keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-            to {
-                visibility: visible
-            }
-        }
-    </style>
-    <noscript>
-        <style amp-boilerplate>
-            body {
-                -webkit-animation: none;
-                -moz-animation: none;
-                -ms-animation: none;
-                animation: none
-            }
-        </style>
-    </noscript>
-
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom>
         .navbar {
             overflow: hidden;
-            background-color: #fff;
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 20px 0;
             z-index: 1;
+            background: rgba(45,45,45,.9) none repeat scroll 0 0;
+            border: 0;
+            padding: 17px;
         }
+      
 
         .navbar a {
-            float: right;
-            display: block;
-            color: #716f6f;
-            text-align: center;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #777;
+            padding: 10px 15px;
+            position: relative;
             text-decoration: none;
-            font-size: 19px;
-            margin-top: 7px;
-             padding: 7px 12px;
-             text-transform: uppercase;
+            text-align: center;
+            float: right;
+            margin-right: 10px;
+            display: block;
         }
 
         .navbar a:first-child {
@@ -132,7 +71,7 @@
             color: #333;
         }
 
-        span {
+        .span {
             color: #d0d0d0;
             float: left;
             font-size: 23px;
@@ -460,15 +399,59 @@
       .ampwork-img {
         margin: 0px 312px;
       }
-      #FAQ.cust_fnt{
-          font-size: 16px;
-      }
       .img-slide {margin-top:80px;}
       .logo{float: left;}
       .no-text-dec:hover {background-color: none;}
-      .footer{padding:10px 0;background-color: #000;color:#909090;}
+      .footer{padding:10px 0;background-color: #000;color:#909090;margin-top: 30%;}
       .footer p {text-align: center;}
+      amp-social-share{
+        border-radius: 70px;
+      }
 
+/* css for forms */
+#form
+
+{
+    height: 300px;
+}
+    #form input[type=text]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+        position: relative;
+    opacity: 10;
+    z-index: 999;
+    
+}
+
+#form label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+#form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-top: 10px;
+   
+}
+
+#form button:hover {
+    background-color: #45a049;
+}
+#formfieldset
+{
+    margin-top: 50px;
+    padding: 20px;
+}
       /* Accordian css */
 
       
@@ -490,7 +473,7 @@ input {
   opacity: 0;
   z-index: -1;
 }
-label {
+.plusIcon {
     position: relative;
     display: block;
     padding: 0 0 0 1em;
@@ -519,7 +502,7 @@ input:checked ~ .tab-content {
   max-height: 10em;
 }
 /* Icon */
-label::after {
+.plusIcon::after {
     position: absolute;
     right: 0;
     top: 0;
@@ -530,7 +513,7 @@ label::after {
     line-height: 3;
     text-align: center;
     transition: all .35s;
-}
+} 
 input[type=checkbox] + label::after {
   content: "+";
 }
@@ -543,6 +526,10 @@ input[type=checkbox]:checked + label::after {
 input[type=radio]:checked + label::after {
   transform: rotateX(180deg);
 }
+.socialshare{
+text-align: center;
+margin-bottom: 10px;
+}
     </style>
 
 </head>
@@ -551,8 +538,8 @@ input[type=radio]:checked + label::after {
     <div class="navbar">
         <p>
             <a href="sampleamp.amp.html" class="no-text-dec">
-                <amp-img src="samplelogo.jpg" class="img_responsive logo" height="35" width="35"></amp-img>
-                <span>Sample Logo</span>
+                <amp-img src="sample-logo.png" class="img_responsive logo" height="35" width="35"></amp-img>
+                <span class="span">Sample Logo</span>
             </a>
         </p>
         <a href="#form">Contact Us</a>
@@ -600,7 +587,7 @@ input[type=radio]:checked + label::after {
     <div id="FAQ" class="mytext">
         <h2>FAQ</h2>
         <amp-accordion disable-session-states>
-            <!-- <section class="accborder">
+           <section class="accborder">
                 <h2 class="cust_fnt">What is the Accelerated Mobile Pages project?</h2>
                 <p>The Accelerated Mobile Pages ("AMP") Project is an open source initiative that came out of discussions between
                     publishers and technology companies about the need to improve the entire mobile content ecosystem for
@@ -649,62 +636,10 @@ input[type=radio]:checked + label::after {
                 <h2>How to implement AMP for my website?</h2>
                 <p>Contact us by requesting a quote and we will reply within 24 hours with detailed project outline, cost and
                     steps to get started.</p>
-            </section> -->
-            <div class="wrapper">
-                <div class="half">
-                  <div class="tab">
-                    <input id="tab-one" type="checkbox" name="tabs">
-                    <label for="tab-one">What is the Accelerated Mobile Pages project?</label>
-                    <div class="tab-content">
-                      <p>The Accelerated Mobile Pages ("AMP") Project is an open source initiative that came out of discussions between
-                        publishers and technology companies about the need to improve the entire mobile content ecosystem for
-                        everyone -- publishers, consumer platforms, advertisers, creators, and users.
-                        <br> Today, the expectation is that content should load super fast and be easy to explore. The reality is
-                        that content can take several seconds to load, or, because the user abandons the slow page, never fully
-                        loads at all. Accelerated Mobile Pages are web pages designed to load near instantaneously -- they are
-                        a step towards a better mobile web for all.</p>
-                    </div>
-                  </div>
-                  <div class="tab">
-                    <input id="tab-two" type="checkbox" name="tabs">
-                    <label for="tab-two">How does AMP for Ecommerce work? </label>
-                    <div class="tab-content">
-                      <p>AMP doesn't affect search ranking directly at this point, but the improved performance on mobile does. AMP
-                        results for organic search terms are promoted to the top of the search engine result page.
-                        <br> Those pages that are converted to AMP format will get a lightning badge, which affects the CTR in search
-                        results. The AMP badge gets 20—40% more clicks on average compared to non-AMP search results.</p>
-                    </div>
-                  </div>
-                  <div class="tab">
-                    <input id="tab-three" type="checkbox" name="tabs">
-                    <label for="tab-three">How does AMP for Ecommerce work? </label>
-                    <div class="tab-content">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
-                    </div>
-                  </div>
-                   <div class="tab">
-                    <input id="tab-four" type="checkbox" name="tabs">
-                    <label for="tab-four">Can I send my AdWords traffic to AMP page?</label>
-                    <div class="tab-content">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
-                    </div>
-                  </div> <div class="tab">
-                    <input id="tab-five" type="checkbox" name="tabs">
-                    <label for="tab-five">What about those free AMP plugins for my website?</label>
-                    <div class="tab-content">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
-                    </div>
-                  </div>
-                   <div class="tab">
-                    <input id="tab-six" type="checkbox" name="tabs">
-                    <label for="tab-six">How to implement AMP for my website?</label>
-                    <div class="tab-content">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
-                    </div>
-                  </div> 
-                  
-                </div>
-              </div>
+            </section>
+           
+                
+                
         </amp-accordion>
 
     </div>
@@ -797,23 +732,28 @@ input[type=radio]:checked + label::after {
 
         </div>
     </div>
-    <div class="footer">
-        <p>Copy right to </p>
-    </div>
-    <!-- <div id="form">
+     <!-- id= "contact-us" -->
+     <div class="frst_container mytext">
+         <div class="col-6 col" >
+             <h2>Order an AMP version</h2>
+             <p>Once the form sent, we will review your request and reply within 1 business day with a detailed project outline.</p>
+             <br><br>
+              <p>      If you have any questions, please list them in the notes field. </p>
+                    <br><br>
+                   <p> Thank you!</p>
+         </div>
+         <div class="col-6 col">
+     <div id="form">
         <form method="post" action-xhr="betabulls.com/smbs" target="_top">
-            <fieldset>
-                <label>
-                    <span>Name:</span>
-                    <input type="text" name="name" required>
-                </label>
-                <br>
-                <label>
-                    <span>Email:</span>
-                    <input type="email" name="email" required>
-                </label>
-                <br>
-                <input type="submit" value="Subscribe">
+            <fieldset id="formfieldset">
+                <label for="name">Name   </label>
+                    
+                    <input type="text" name="name" id="name" required>
+             <br>
+                <label for="email"> Email:</label>
+                    <input type="text" name="email" id="email" required>
+              <br>
+                <button>Submit</button>
             </fieldset>
             <div submit-success>
                 <template type="amp-mustache">
@@ -826,8 +766,32 @@ input[type=radio]:checked + label::after {
                 </template>
             </div>
         </form>
+        </div>
     </div>
- -->
+    </div>
+    <div class="footer">
+        <div class="socialshare">
+            <amp-social-share type="linkedin" width="40" height="34"
+            data-param-text="Hello world"
+            data-param-url="#">
+          </amp-social-share>
+          <amp-social-share type="twitter" width="40" height="34"
+            data-param-text="Hello world"
+            data-param-url="#">
+          </amp-social-share>
+          <amp-social-share type="facebook" width="40" height="34"
+          data-param-text="Hello world"
+          data-param-url="#">
+        </amp-social-share>
+        <amp-social-share type="pinterest" width="40" height="34"
+        data-param-text="Hello world"
+        data-param-url="#">
+      </amp-social-share>
+        </div>
+        <p>@ 2018 BetaBulls </p>
+    </div>
+   
+
 
 
 </body>
